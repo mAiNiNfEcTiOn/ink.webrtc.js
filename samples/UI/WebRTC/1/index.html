@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>InkJS - WebRTC samples</title>
+
+        <link rel="stylesheet" href="http://cdn.ink.sapo.pt/2.2.0/css/ink-min.css" />
+        <link rel="stylesheet" href="http://cdn.ink.sapo.pt/2.2.0/css/docs.css" />
+
+        <script type="text/javascript" src="http://cdn.ink.sapo.pt/2.2.0/js/ink.js"></script>
+        <script type="text/javascript" src="./ink.webrtc.js"></script>
+        <script type="text/javascript" src="http://cdn.ink.sapo.pt/2.2.0/js/ink-ui.js"></script>
+        <style>
+            pre.prettyprint{
+                font-size: 0.75em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="ink-navigation ink-container">
+            <ul class="menu horizontal black flat">
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </nav>
+        <div class="ink-container ink-grid">
+            <h1>WebRTC Samples - InkJS</h1>
+
+            <section>
+                <header>
+                    <h2>WebRTC #1 - Default Markup</h2>
+                </header>
+                <video id="local" autoplay="autoplay" muted="muted"></video>
+                <video id="remote" autoplay="autoplay"></video>
+                <p>
+                    <pre class="prettyprint linenums"></pre>
+                </p>
+            </section>
+            <script>
+                Ink.requireModules(['Ink.Dom.Loaded_1','Ink.UI.WebRTC_1'],function(Loaded, WebRTC){
+
+                    // Loaded.run(function(){
+
+                        window.webrtc = new WebRTC({
+                            localVideoElm: Ink.i('local'),
+                            remoteVideoElm: Ink.i('remote'),
+                            roomName: 'testInk1234'
+                        });
+
+                    // });
+
+                });
+            </script>
+        </div>
+    </body>
+</html>
