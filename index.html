@@ -45,7 +45,7 @@
 &lt;script&gt;
 Ink.requireModules(['Ink.Dom.Loaded_1','Ink.UI.WebRTC_1'],function(Loaded, WebRTC){
   Loaded.run(function(){
-    window.webrtc = new WebRTC({
+    var webrtc = new WebRTC({
       localVideoElm: Ink.i('local'),
       remoteVideoElm: Ink.i('remote'),
       roomName: 'testInk1234'
@@ -58,15 +58,15 @@ Ink.requireModules(['Ink.Dom.Loaded_1','Ink.UI.WebRTC_1'],function(Loaded, WebRT
             <script>
                 Ink.requireModules(['Ink.Dom.Loaded_1','Ink.UI.WebRTC_1'],function(Loaded, WebRTC){
 
-                    // Loaded.run(function(){
+                    Loaded.run(function(){
 
-                        window.webrtc = new WebRTC({
+                        webrtc = new WebRTC({
                             localVideoElm: Ink.i('local'),
                             remoteVideoElm: Ink.i('remote'),
                             roomName: 'testInk1234'
                         });
 
-                    // });
+                    });
 
                 });
             </script>
