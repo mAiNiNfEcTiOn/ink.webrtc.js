@@ -530,7 +530,7 @@ Ink.createModule('Ink.UI.WebRTC', '1', ['Ink.Dom.Event_1','Ink.Dom.Selector_1','
             roomName: 'room'+Math.floor(Math.random()*6000),
             signalingServer: 'ws://198.211.126.126:8080',
             stunServers: [
-                'stun.l.google.com:19302' // ,'stun1.l.google.com:19302','stun2.l.google.com:19302',
+                // 'stun.l.google.com:19302' // ,'stun1.l.google.com:19302','stun2.l.google.com:19302',
                 // 'stun3.l.google.com:19302','stun4.l.google.com:19302','stun01.sipphone.com',
                 // 'stun.ekiga.net','stun.fwdnet.net','stun.ideasip.com','stun.iptel.org',
                 // 'stun.rixtelecom.se','stun.schlund.de','stunserver.org','stun.softjoys.com',
@@ -538,7 +538,7 @@ Ink.createModule('Ink.UI.WebRTC', '1', ['Ink.Dom.Event_1','Ink.Dom.Selector_1','
                 // 'stun.xten.com'
             ],
             turnServers: [
-                //{url: 'numb.viagenie.ca', username: 'pt.n00b@gmail.com', credential: 'canoagem'}
+                {url: 'numb.viagenie.ca', username: 'pt.n00b@gmail.com', credential: 'canoagem'}
             ],
             audioShare: true,
             videoShare: true,
